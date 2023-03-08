@@ -4,8 +4,8 @@ import { getRecord } from 'lightning/uiRecordApi';
 import { ShowToastEvent } from 'lightning/platformShowToastEvent';
 
 const FIELDS = [
-    'User.Name',
-    'User.Image__c'
+    'account.Name',
+    'account.Image__c'
 ];
 
 export default class UserImage extends LightningElement {
@@ -16,7 +16,7 @@ export default class UserImage extends LightningElement {
 
     connectedCallback() {
 
-        console.log( 'Id of the user is ' + this.userId );
+       
         console.log( 'Fields are ' + JSON.stringify( FIELDS ) );
         
     }
