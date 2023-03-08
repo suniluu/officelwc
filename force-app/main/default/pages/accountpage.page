@@ -1,0 +1,112 @@
+<apex:page standardController="Account" id="pgcontent">
+    <script type="text/javaScript">
+    
+    function copyAddress()
+    {
+        var copy_billingcity=document.getElementById('pgcontent:fmcontent:pbcontent:phBillingaddress:ifbcity').value;
+        var copy_billingstreet=document.getElementById('pgcontent:fmcontent:pbcontent:phBillingaddress:ifbstreet').value;
+        var copy_billingstate=document.getElementById('pgcontent:fmcontent:pbcontent:phBillingaddress:ifbstate').value;
+        var copy_billingcountry=document.getElementById('pgcontent:fmcontent:pbcontent:phBillingaddress:ifbcountry').value;
+        
+        
+        if(copy_billingcity!=null)
+        {
+            document.getElementById('pgcontent:fmcontent:pbcontent:phBillingaddress:ifscity').value=copy_billingcity;
+        }
+        if(copy_billingstreet!=null)
+        {
+            document.getElementById('pgcontent:fmcontent:pbcontent:phBillingaddress:ifsstreet').value=copy_billingstreet
+        }
+        if(copy_billingstate!=null)
+        {
+            document.getElementById('pgcontent:fmcontent:pbcontent:phBillingaddress:ifsstate').value=copy_billingstate
+        }
+        if(copy_billingcountry!=null)
+        {
+            document.getElementById('pgcontent:fmcontent:pbcontent:phBillingaddress:ifscountry').value=copy_billingcountry;
+        }
+    }
+    </script>
+<div><apex:sectionHeader title="Business Account Edit" subtitle="New Account"/> </div>
+     <apex:form id="fmcontent">
+    
+        <apex:pageBlock title="Business Account Edit" mode="edit" id="pbcontent" >
+        
+            <apex:pageBlockButtons >
+                <apex:commandButton value="Save" action="{!Save}"/>
+                <apex:commandButton action="{Save&New}" value="Save & New"  />
+                <apex:commandButton value="Cancel" action="{!Cancel}"/>
+               
+            </apex:pageBlockButtons>
+
+ 
+                <apex:pageBlockSection title="Account Information" columns="2" >
+                  <apex:facet name="Header">
+                    <apex:outputPanel style="font-weight:bold font-size:13px float:left">
+                    <apex:commandLink style="float:right" value="copy Billing address to shipping address" reRender="AddressinformationPBs" onclick="copyAddress()"/>
+                    </apex:outputPanel>
+                </apex:facet>
+               <apex:inputField value="{!Account.Owner.name}" />
+               <apex:inputField value="{!Account.Rating}" />
+               <apex:inputField value="{!Account.name}" />
+               <apex:inputField value="{!Account.Phone}" />
+               <apex:inputField value="{!Account.ParentId}" />
+                  <apex:inputField value="{!Account.Fax}" />
+                <apex:inputField value="{!Account.Accountnumber}" />
+                <apex:inputField value="{!Account.website}" />
+                 <apex:inputField value="{!Account.Site}" />
+                 <apex:inputField value="{!Account.TickerSymbol}" />
+                 <apex:inputField value="{!Account.Type}" />
+                 <apex:inputField value="{!Account.Ownership}" />
+                 <apex:inputField value="{!Account.Industry }" />
+                 <apex:inputField value="{!Account.NumberOfEmployees}" />
+                 <apex:inputField value="{!Account.AnnualRevenue}" />
+                 <apex:inputField value="{!Account.Sic}" />
+                 <apex:inputField value="{!Account.CurrencyIsoCode}" /><br/>
+                 <apex:inputField value="{!Account.Latest_Contact__c}" /><br/>
+                  <apex:inputField value="{!Account.Latest_Opportunity__c}" /><br/>
+                   <apex:inputField value="{!Account.Region__c}" /><br/>
+                    <apex:inputField value="{!Account.Directions__c}" /><br/>
+                     <apex:inputField value="{!Account.No_Of_Contacts__c}" /><br/>
+                      <apex:inputField value="{!Account.Email__c}" /><br/>
+                       <apex:inputField value="{!Account.Contact_Name__c}" /><br/>
+                        <apex:inputField value="{!Account.TotalOpportunityAmount__c}" /><br/>
+                         <apex:inputField value="{!Account.Assosiated_contacts__c}" /><br/>
+                          <apex:inputField value="{!Account.Total_sales_Quantity__c}" /><br/>
+                           </apex:pageBlockSection>
+                         
+                           <apex:pageBlockSection title="Address Information" showHeader="true" collapsible="true" id="phBillingaddress" >
+                          
+                           <apex:inputField value="{!Account.billingstreet}" />
+                           <apex:inputField value="{!Account.shippingstreet}" />
+                           <apex:inputField value="{!Account.billingcity}" />
+                           <apex:inputField value="{!Account.shippingcity}" />
+                           <apex:inputField value="{!Account.billingPostalCode}" />
+                           <apex:inputField value="{!Account.shippingPostalCode}" />
+                           <apex:inputField value="{!Account.billingState}" />
+                           <apex:inputField value="{!Account.shippingState}" />
+                           <apex:inputField value="{!Account.billingCountry }" />
+                            <apex:inputField value="{!Account.shippingcountry}" /> 
+                           </apex:pageBlockSection>
+                        
+                           <apex:pageBlockSection title="Additional Information"  >
+                            <apex:inputField value="{!Account.CustomerPriority__c}" />
+                             <apex:inputField value="{!Account.SLA__c}" />
+                              <apex:inputField value="{!Account.SLAExpirationDate__c}" />
+                               <apex:inputField value="{!Account.SLASerialNumber__c}" />
+                                <apex:inputField value="{!Account.NumberofLocations__c}" />
+                                 <apex:inputField value="{!Account.UpsellOpportunity__c}" />
+                                  <apex:inputField value="{!Account.Active__c}" />
+                            </apex:pageBlockSection>
+                          
+                           <apex:pageBlockSection title="Description Information"  >
+                           <apex:inputField value="{!Account.Description}"  /><br/>
+                            <apex:inputField value="{!Account.Branches__c}" /><br/>
+                            <apex:inputField value="{!Account.multiselectpicklist__c}" /><br/>
+                             
+                            </apex:pageBlockSection>
+                          
+        </apex:pageBlock>
+    </apex:form>
+    
+</apex:page>

@@ -1,0 +1,8 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+	<div>
+        <h1 >Nothing can stop the man with the right mental attitude from achieving his goal. Nothing on earth can help the man with the wrong attitude</h1>
+        <h2 class="a1">The more I want to get something done the less I call it work.</h2>
+        <h3 class="b1">Develop success from failures. Discouragement and failure are two of the surest stepping stones to success.</h3>
+        <h4 class="c1">Success is the sum of small efforts repeated day in and day out</h4>
+    </div>
+</aura:component>

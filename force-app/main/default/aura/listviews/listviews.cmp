@@ -1,0 +1,13 @@
+<aura:component >
+	
+<lightning:listView aura:id="listViewAccounts"
+    objectApiName="Account"
+    listName="AllAccounts"
+    rows="50"
+    showSearchBar="true"
+    showActionBar="true"
+    enableInlineEdit="true"
+    showRowLevelActions="true"
+/>
+        
+</aura:component>

@@ -1,0 +1,9 @@
+<aura:event type="COMPONENT" description="Event template" >
+    
+    <aura:attribute name='Eamount' type="integer" />
+    <aura:attribute name='Eroi' type="integer" />
+    <aura:attribute name='Enoofyears' type="integer" />
+     <aura:attribute name='Esi' type="integer" />
+    <aura:attribute name='Eamounttoreturn' type="integer" />
+   
+</aura:event>

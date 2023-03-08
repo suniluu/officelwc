@@ -1,0 +1,90 @@
+<apex:page standardController="Product2" recordSetVar="Product" >
+    <apex:form > 
+        <apex:sectionHeader title="Products" subtitle="Home" help="Tell me more! | Help for this Page"/>
+        Enter keyword to find matching products. <br/>
+        <apex:inputText maxlength="20" style="Cell-spacing:500"/>
+        <apex:commandButton value="Find Product"/> <br/>
+        
+        <br/>
+        <!--1-->   <apex:pageBlock title="Price Books">
+        <apex:panelGroup >
+            <apex:outputText value="View : "></apex:outputText>
+            <apex:selectList value="{!PageSize}" size="1">
+                <apex:selectOption itemValue="Regular Customer" itemLabel="Regular Customer"></apex:selectOption>
+                <apex:selectOption itemValue="Retailer Price" itemLabel="Retailer Price"></apex:selectOption>
+                <apex:selectOption itemValue="Standard" itemLabel="Standard"></apex:selectOption>
+                <apex:selectOption itemValue="Standard Price Book" itemLabel="Standard Price Book"></apex:selectOption>
+                <apex:selectOption itemValue="Whole Saler Price" itemLabel="Whole Saler Price"></apex:selectOption>
+            </apex:selectList>
+            
+            <apex:commandButton value="Go!"/> <tb/>
+            <apex:commandLink value="Create New View"/><br/>
+            
+        </apex:panelGroup>
+        </apex:pageBlock>
+        
+        <!--2--> <apex:pageBlock title="Product Views">
+        <apex:panelGroup >
+            <apex:outputText value="View : "></apex:outputText>
+            <apex:selectList value="{!PageSize}" size="1">
+                <apex:selectOption itemValue="All Products" itemLabel="All Products"></apex:selectOption>
+            </apex:selectList>
+            
+            <apex:commandButton value="Go!"/> <tb/>
+            <apex:commandLink value="Edit"/> <t/>
+            <apex:commandLink value="Create New View"/><br/>
+            
+        </apex:panelGroup>
+        </apex:pageBlock>
+        
+        <!--3-->  <apex:pageBlock title="Asset Views">
+        <apex:panelGroup >
+            <apex:outputText value="View : "></apex:outputText>
+            <apex:selectList value="{!PageSize}" size="1">
+                <apex:selectOption itemValue="All Assets" itemLabel="All Assets"></apex:selectOption>
+            </apex:selectList>
+            
+            <apex:commandButton value="Go!"/> <tb/>
+            <apex:commandLink value="Edit"/> <t/>
+            <apex:commandLink value="Create New View"/><br/>
+            
+        </apex:panelGroup>
+        </apex:pageBlock>
+        
+        <!--4--> <apex:pageBlock title="Recent Products">
+        <apex:pageBlockButtons location="Top" >
+            
+            <apex:commandButton value="New" action="{new}"/>
+            
+            <apex:selectList value="{!PageSize}" size="1" style="float:right">
+<apex:selectOption itemValue="Recently viewed" itemLabel="Recently viewed"></apex:selectOption>
+                <apex:selectOption itemValue="Recently Modified" itemLabel="Recently Modified"></apex:selectOption>
+                <apex:selectOption itemValue="Recently Created" itemLabel="Recently Created"></apex:selectOption>
+            </apex:selectList>
+            
+        </apex:pageBlockButtons>
+        
+        <apex:pageBlockTable value="{!Product}" var="p">
+            <apex:column value="{!p.Name}"/>
+            <apex:column value="{!p.productcode}"/>
+            <apex:column value="{!p.description}"/>
+        </apex:pageBlockTable>  
+        </apex:pageBlock>
+        
+        <!--5-->
+         <div style="float:left ; width:49%" >
+        <apex:pageBlock title="Reports" >
+            <b><apex:commandLink value="Go To Report >> "/></b>
+            
+        </apex:pageBlock>
+        </div>
+        
+        <div style="float:right ; width:49%">
+        <apex:pageBlock title="Maintainence">
+                <apex:commandLink value="Manage Price Books"/> <br/> <br/>
+                <apex:commandLink value="Mass Delete Products "/>
+        </apex:pageBlock>
+        </div>
+        
+    </apex:form>
+</apex:page>

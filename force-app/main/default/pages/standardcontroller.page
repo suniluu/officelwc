@@ -1,0 +1,9 @@
+<apex:page STAndardController="Position__c" >
+ <p>
+ <font size="3">
+  This is your new Page: standardcontroller
+  position name::{!Position__c.name}<br/>
+  position location::{!Position__c.Location__c}<br/>
+</font>
+</p>
+</apex:page>

@@ -1,0 +1,18 @@
+<aura:component >
+
+    <aura:attribute Name="FNumber" type="Integer" default="100"/>
+    <aura:attribute Name="SNumber" type="Integer" default="120"/>
+    <aura:attribute Name="Result" type="Integer"/>
+    <div>
+    <lightning:input type="Number" Name="FirstNumber" aura:id="fn"  value="{!v.FNumber}"  label="Enter FirstNumber" />
+    <lightning:input type="Number" Name="SecondNumber" aura:id="Sn" value="{!v.SNumber}"  label="Enter SecondNumber" />
+    <lightning:input type="Number" Name="Result" aura:id="res" value="{!v.Result}" label="Result" />
+    <lightning:button variant="brand" label="Addition" title="Add" onclick="{!c.addNum }" />   
+    </div>
+    <div>
+        Addition RESULT::::<br/>
+        First Num ::{!v.FirstNumber} <br/>
+        Second Num ::{!v.SecondNumber} <br/>
+        Result ::{!v.Result} <br/>
+    </div>
+</aura:component>

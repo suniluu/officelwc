@@ -1,0 +1,11 @@
+<aura:component controller="CreateJobApplicationByPositionController" implements="flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+    <aura:attribute name="Status" type="string"/>
+    <aura:attribute name="recordId" type="id"/>
+    
+    <lightning:input label="Status" placeholder="Enter Status" value="{!v.Status}"/>
+     
+    <lightning:button variant="success" label="Create Job Application"  onclick="{!c.createJob}"/> <br/>
+    
+    <br/>
+    record Id:{!v.recordId}
+</aura:component>

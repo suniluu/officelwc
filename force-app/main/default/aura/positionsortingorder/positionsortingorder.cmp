@@ -1,0 +1,13 @@
+<aura:component controller="Positionsortingorder" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+	 <aura:attribute type="Position__c[]" name="posList"/>
+    <aura:attribute name="mycolumns" type="List"/>
+    <aura:attribute name="sortedBy" type="String" default="Name"/>
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+      
+    <lightning:datatable 
+                         data="{!v.posList }"
+                         columns="{!v.mycolumns }"
+                         keyField="id"
+                         sortedBy="{!v.sortedBy}"
+                         />
+</aura:component>

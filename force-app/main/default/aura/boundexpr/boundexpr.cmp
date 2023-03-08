@@ -1,0 +1,9 @@
+<aura:component >
+    <aura:attribute name="myName" type="string" default="hi"/>
+     <aura:attribute name="myName2" type="string" default="hello"/>
+    <lightning:input name="myName" value="{!v.myName}"/>
+    <lightning:input name="myName2" value="{!v.myName2}" />
+
+    Name::{!v.myName}
+    Name2::{#v.myName2}
+</aura:component>

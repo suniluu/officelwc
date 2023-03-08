@@ -1,0 +1,48 @@
+<template>
+    <lightning-card title="For Loop">
+
+        <h1>Iterator Example</h1>
+        <div class="slds-var-m-around_medium">
+            <template iterator:emp={empList}>
+                <div key={emp.value.id}>
+                    <ul>
+                        <template if:true={emp.first}>
+                            <div class="slds-var-m-around_medium">
+                            <strong>
+                                List Of Empolyees
+                            </strong>
+                            </div> 
+                        </template>
+                        <li>
+                            <strong>
+                                EmpId:{emp.value.id}
+                            </strong>
+                        </li>
+                        <li>
+                            <strong>
+                                EmpName:{emp.value.ename}
+                            </strong>
+                        </li>
+                        <li>
+                            <strong>
+                                EmpSalary:{emp.value.salary}
+                            </strong>
+                        </li>
+                        <template if:true={emp.last}>
+                            <div class="slds-var-m-around_medium">
+                                <strong>
+                                    End Of Empolyee List
+                                </strong>
+                            </div>
+                        </template>
+
+                    </ul>
+                </div>
+                
+            </template>
+       </div>
+        
+
+
+    </lightning-card>
+</template>

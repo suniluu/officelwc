@@ -1,0 +1,29 @@
+<aura:component implements="force:appHostable" >
+    <aura:attribute name="EmpName" type="String" default="Sunil"/>
+    <aura:attribute name="EmpAge" type="Integer" default="23"/>
+    <aura:attribute name="EmpSalary" type="Decimal" default="95000.00"/>
+    <aura:attribute name="DateOfBirth" type="Date" default="2000-01-1"/>
+    <aura:attribute name="TimeOfBirth" type="DateTime" default="2000-01-10T01:00:00.530Z"/>
+    <aura:attribute name="IsIndian" type="Boolean" default="false"/>
+    <aura:attribute name="IndianNationIncome" type="Long" default="9800000000"/>
+    <aura:attribute name="EmpIds" type="Integer[]" default="[1001,1002,1003]"/>
+    <aura:attribute name="EmpCitites" type="String[]" default="['Hyd','Delhi','Chennai']"/>
+    <aura:attribute name="DIds" type="Set" default="[101,102,103]"/>
+    <aura:attribute name="DEmpNames" type="List" default="['ABC','XYZ','HIJ']"/>
+    <aura:attribute name="EmpIdNames" type="Map" default="{'mahi':'Mahesh','jyo':'Jyothi'}"/>
+ <!--   <aura:attribute name="acc" type="Account" default="[sObjecttype:'Account',name='Lohitha',phone='2456413226']"/>
+ -->
+    Employee Name: {!v.EmpName}<br/>
+    Employee Age: {!v.EmpAge}<br/>
+    Employee Salary: {!v.EmpSalary}<br/>
+    Employee DOB: {!v.DateOfBirth}<br/>
+    Employee TOB: {!v.TimeOfBirth}<br/>
+    Is Employee Indian? : {!v.IsIndian}<br/>
+    Indian National Income: {!v.IndianNationIncome}<br/>
+   Employee Ids: {!v.EmpIds[0]},{!v.EmpIds[1]},{!v.EmpIds[2]}<br/>
+    Employee Names: {!v.EmpCitites[0]},{!v.EmpCitites[1]},{!v.EmpCitites[2]}<br/>
+    Department Ids: {!v.DIds[0]},{!v.DIds[1]},{!v.DIds[2]}<br/>
+     Department Employee Names: {!v.DEmpNames[0]}<br/> 
+    Employee Name Using Map: {!v.EmpIdNames.mahi},{!v.EmpIdNames.jyo}<br/>
+    
+</aura:component>

@@ -1,0 +1,10 @@
+<aura:component >
+		<aura:attribute name="EmpName1" type="String" default="James" />
+    	<aura:attribute name="Company" type="String" />
+    	<aura:attribute name="EmpCity" type="String" default="Hyderabad" />
+
+    From Child Component::<br/><br/>
+    EmpName::{!v.EmpName1}<br/><br/>
+        Company::{!v.Company}<br/><br/>
+		City::{!v.EmpCity}
+</aura:component>

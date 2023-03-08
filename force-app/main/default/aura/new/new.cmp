@@ -1,0 +1,9 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+
+    <p>hello welcome to lightingWorld</p>
+    <h1 class="h1class" style="color:Tomato;">Hello World</h1>
+  <p style="color:DodgerBlue;">Hi,sunil</p>
+  
+	
+
+</aura:component>

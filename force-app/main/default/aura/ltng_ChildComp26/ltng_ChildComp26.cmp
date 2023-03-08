@@ -1,0 +1,5 @@
+<aura:component >
+    <aura:registerEvent name="regInChild" type="c:ltng_ComponentEvent26"/>
+    <aura:attribute name="textMessage" type="String" default="From Child Component"/>
+    <lightning:button variant="brand" label="Click Here" onclick="{!c.handleEvent}"/>
+</aura:component>

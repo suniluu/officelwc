@@ -1,0 +1,18 @@
+<aura:component implements="force:appHostable,flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+
+            <aura:attribute name="recordId" type="String"/>
+            <lightning:notificationsLibrary aura:id="notifLib"/>
+
+            <lightning:recordForm
+                    objectApiName="Candidate__c"
+                                    >
+    <lightning:inputField fieldName="Last_Name__c" />
+        <lightning:inputField fieldName="Aadhar__c"/>
+        <lightning:inputField fieldName="SSN__c" />
+        <lightning:inputField fieldName="B_Tech_Branches__c"/>
+         
+    </lightning:recordForm> 
+    
+    
+    
+</aura:component>

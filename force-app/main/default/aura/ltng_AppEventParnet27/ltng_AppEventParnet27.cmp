@@ -1,0 +1,7 @@
+<aura:component >
+    <aura:handler event="c:ltng_AppEvent27" action="{!c.handleFromChild}"/>
+    <aura:attribute name="parnetMessage" type="string" />
+    <b>
+    {!v.parnetMessage}
+    </b>
+</aura:component>

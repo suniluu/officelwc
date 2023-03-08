@@ -1,0 +1,14 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+
+    <aura:attribute name="fields" type="String[]" default="['Name','Industry','AnnualRevenue']"/>
+    <aura:attribute name="recordId" type="String"/>
+   
+    
+    <lightning:recordForm 
+                     recordId="0015g00000r5ny8AAA"
+                     objectApiName="Account"
+                     layoutType="Compact"
+                          columns="2"
+                     mode="readonly"/>
+  
+</aura:component>

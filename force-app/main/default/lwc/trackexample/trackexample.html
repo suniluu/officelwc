@@ -1,0 +1,16 @@
+<template>
+    <h1> Variable with Track Example</h1>
+    <lightning-card title="TrackExample">
+        <lightning-button label="New" slot="actions"></lightning-button>
+    <div class="slds-var-m-around_medium">
+     <lightning-input type="text" label="Enter Some Text" onchange={handlechange}
+      placeholder="typehere" name="greeting" >{greetings}</lightning-input>
+    </div>
+    <div>
+     You have typed {greetings}
+    </div>
+    <div>
+     {bye}
+    </div>
+ </lightning-card>
+ </template>

@@ -1,0 +1,33 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+    
+    <aura:attribute name="newPosRecord" type="Object" />
+    <aura:attribute name="recordFieldToQuery" type="Object" />
+    <aura:attribute name="recordError" type="String" />
+    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    
+    <force:recordData
+                      aura:id="createposRecord"
+                      layoutType="FULL"
+                      mode="EDIT"
+                      fields="Id"
+                      targetRecord="{!v.newPosRecord}"
+                      targetFields="{!v.recordFieldToQuery}"
+                      targetError="{!v.recordError}"
+                      />
+    
+   
+    
+   <lightning:card title="Create Position" >
+        <p>
+            <lightning:input label="Name" placeholder="Name"  value="{!v.recordFieldToQuery.Name}" />
+            <lightning:input label="Functional_Area__c" value="{!v.recordFieldToQuery.Functional_Area__c}" />
+            <lightning:input label="Min_Pay__c" value="{!v.recordFieldToQuery.Min_Pay__c}" />
+            <lightning:input label="Max_Pay__c" value="{!v.recordFieldToQuery.Max_Pay__c}" />
+            
+            <lightning:button variant="Brand" label="Create Position" onclick="{!c.createpos}"/>
+        </p>
+    </lightning:card>
+    
+    
+</aura:component>

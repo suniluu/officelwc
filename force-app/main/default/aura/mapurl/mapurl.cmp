@@ -1,0 +1,23 @@
+<aura:component>
+    <!-- attributes -->
+    <aura:attribute name="mapMarkers" type="Object"/>
+    <aura:attribute name="zoomLevel" type="Integer" />
+    <aura:handler name="init" value="{! this }" action="{! c.init }"/>
+
+    <div class="slds-float_left">
+        <img src="{!$Resource.d}" height="500" width="300" />
+                                                         
+    </div>
+   <div class="slds-float_right">
+        <lightning:formattedAddress
+        street="13-6-460/38/b MaheshNagar Colony"
+        city="Hyderabad"
+        country="India"
+        province="TS"
+        postalCode="500028"
+    />
+    <lightning:map 
+        mapMarkers="{! v.mapMarkers }" 
+        zoomLevel="{!v.zoomLevel}" />
+       </div>
+</aura:component>

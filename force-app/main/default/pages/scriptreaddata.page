@@ -1,0 +1,60 @@
+<apex:page id="content">
+    <script type="text/javaScript">
+    
+    function Copya()
+    {
+        var copy_LastName=document.getElementById('content:fmcontent:pbcontent:phBillingaddress:ifaLastName').value;
+        var copy_FirstName=document.getElementById('content:fmcontent:pbcontent:phBillingaddress:ifaFirstName').value;
+        var copy_Phone=document.getElementById('content:fmcontent:pbcontent:phBillingaddress:ifaPhone').value;
+        var copy_Email=document.getElementById('content:fmcontent:pbcontent:phBillingaddress:ifaemail').value;
+        
+        
+        if(copy_LastName!=null)
+        {
+            document.getElementById('content:fmcontent:pbcontent:phBillingaddress:ifbLastName').value=copy_LastName;
+        }
+        if(copy_FirstName!=null)
+        {
+            document.getElementById('content:fmcontent:pbcontent:phBillingaddress:ifbFirstName').value=copy_FirstName;
+        }
+        if(copy_Phone!=null)
+        {
+            document.getElementById('content:fmcontent:pbcontent:phBillingaddress:ifbPhone').value=copy_Phone;
+        }
+        if(copy_Email!=null)
+        {
+            document.getElementById('content:fmcontent:pbcontent:phBillingaddress:ifbEmail').value=copy_Email;
+        }
+    }
+    </script>
+  <apex:form id="fmcontent">
+  <apex:pageBlock mode="edit" id="pbcontent">
+  <apex:pageBlockSection showHeader="true" collapsible="true" title="A" id="phBillingaddress">
+   <apex:facet name="Header">
+                    <apex:outputPanel style="font-weight:bold font-size:13px float:left">
+                    <apex:commandLink style="float:right;" value="copy A to B"  onclick="Copya()"/>
+                    </apex:outputPanel>
+                </apex:facet>
+  <apex:inputText label="Lastname"/>
+   <apex:inputText label="firstname" />
+    <apex:inputText label="phone" />
+     <apex:inputText label="email" />
+   </apex:pageBlockSection>
+  
+  <apex:pageBlockSection title="B" >
+
+  <apex:inputText label="Lastname"/>
+   <apex:inputText label="Firstname" />
+    <apex:inputText label="Phone" />
+     <apex:inputText label="Email" />
+   </apex:pageBlockSection>
+  
+  
+  
+  </apex:pageBlock>
+  
+  
+  
+  </apex:form>
+  
+</apex:page>

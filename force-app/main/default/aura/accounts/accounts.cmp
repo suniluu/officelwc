@@ -1,0 +1,20 @@
+<aura:component controller="accnot" implements="force:hasRecordId">
+    <aura:attribute name="Accounts" type="list"/>
+    <aura:attribute name="industry" type="String"/>
+    <aura:attribute name="columns" type="list" />
+   
+    <lightning:select name="select" label="Select a Industry" required="true" value="{!v.industry}">
+      
+        <option value="Education">Education</option>
+        <option value="Agriculture">Agriculture</option>
+        <option value="Banking">Banking</option>
+    </lightning:select>
+    <lightning:button variant="success" label="Get Account records" title="Accounts" onclick="{!c.searchaccounts}"/>
+                       
+    Account info::<br/><br/><br/>
+    <lightning:datatable
+                         keyField="id"
+                		data="{!v.Accounts }"
+                        columns="{!v.columns }" />
+	
+</aura:component>

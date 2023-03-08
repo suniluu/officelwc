@@ -1,0 +1,209 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,force:lightningQuickAction" access="global" >
+   
+    <lightning:tabset selectedTabId="two">
+        <lightning:tab label="Related" id="one">
+            <div class="slds-p-around_small">
+                <article class="slds-card  ">
+                    <div class="slds-card__header slds-grid slds-box">
+                        <header class="slds-media slds-media_center slds-has-flexi-truncate">
+                            <div class="slds-media__body">
+                                <h2 class="slds-card__header-title">
+                                    <a href="#" class="slds-card__header-link slds-truncate" title="Accounts">
+                                        <lightning:icon iconName="standard:merge" alternativeText="merge file" title="XML" /> 
+                                        <span><strong>We found no potential duplicates of this Account.</strong></span>
+                                    </a>
+                                </h2>
+                            </div> 
+                        </header>
+                    </div>
+                </article>
+            </div>  
+            <div>
+               
+                <div class="slds-card">
+                    <div class="slds-p-around_small">
+                        <article class="slds-card">
+                            <div class="slds-card__header slds-grid slds-box">
+                                <header class="slds-media slds-media_center slds-has-flexi-truncate">
+                                    <div class="slds-media__body">
+                                        <h2 class="slds-card__header-title">
+                                            <a href="#" class="slds-card__header-link slds-truncate" title="Accounts">
+                                                <lightning:icon iconName="standard:contact" alternativeText="contact " title="XML" />
+                                                <span><strong>Contacts(0)</strong></span>
+                                            </a>
+                                        </h2>
+                                    </div>
+                                    <div class="slds-no-flex">
+                                        <lightning:button variant="brand-outline"  label="New" title="Brand action" onclick="{! c.handleClick }" />
+                                    </div>
+                                   
+                                </header>
+                               
+                            </div>
+                           
+                        </article>
+                    </div>
+                </div>
+                  <div class="slds-card">
+                    <div class="slds-p-around_small">
+                        <article class="slds-card">
+                            <div class="slds-card__header slds-grid slds-box">
+                                <header class="slds-media slds-media_center slds-has-flexi-truncate">
+                                    <div class="slds-media__body">
+                                        <h2 class="slds-card__header-title">
+                                            <a href="#" class="slds-card__header-link slds-truncate" title="Accounts">
+                                                <lightning:icon iconName="standard:opportunity" alternativeText="contact " title="XML" />
+                                                <span><strong>Opportunities(0)</strong></span>
+                                            </a>
+                                        </h2>
+                                    </div>
+                                    <div class="slds-no-flex">
+                                        <lightning:button variant="brand-outline"  label="New" title="Brand action" onclick="{! c.handleClick }" />
+                                    </div>
+                                   
+                                </header>
+                               
+                            </div>
+                           
+                        </article>
+                    </div>
+                </div>     <div class="slds-card">
+                    <div class="slds-p-around_small">
+                        <article class="slds-card">
+                            <div class="slds-card__header slds-grid slds-box">
+                                <header class="slds-media slds-media_center slds-has-flexi-truncate">
+                                    <div class="slds-media__body">
+                                        <h2 class="slds-card__header-title">
+                                            <a href="#" class="slds-card__header-link slds-truncate" title="Accounts">
+                                                <lightning:icon iconName="standard:case" alternativeText="contact " title="XML" />
+                                                <span><strong>Cases(0)</strong></span>
+                                            </a>
+                                        </h2>
+                                    </div>
+                                    <div class="slds-no-flex">
+                                        <lightning:button variant="brand-outline"  label="New" title="Brand action" onclick="{! c.handleClick }" />
+                                    </div>
+                                   
+                                </header>
+                               
+                            </div>
+                           
+                        </article>
+                    </div>
+                </div>   
+            <div class="slds-card">
+                    <div class="slds-p-around_small">
+                        <article class="slds-card">
+                            <div class="slds-card__header slds-grid slds-box">
+                                <header class="slds-media slds-media_center slds-has-flexi-truncate">
+                                    <div class="slds-media__body">
+                                        <h2 class="slds-card__header-title">
+                                            <a href="#" class="slds-card__header-link slds-truncate" title="Accounts">
+                                                <lightning:icon iconName="standard:contract" alternativeText="contact " title="XML" />
+                                                <span><strong>Contracts(0)</strong></span>
+                                            </a>
+                                        </h2>
+                                    </div>
+                                    <div class="slds-no-flex">
+                                        <lightning:button variant="brand-outline"  label="New" title="Brand action" onclick="{! c.handleClick }" />
+                                    </div>
+                                   
+                                </header>
+                               
+                            </div>
+                           
+                        </article>
+                    </div>
+                </div>
+                 <div class="slds-p-around_small">
+                <article class="slds-card  ">
+                    <div class="slds-card__header slds-grid slds-box">
+                        <header class="slds-media slds-media_center slds-has-flexi-truncate">
+                            <div class="slds-media__body">
+                                <h2 class="slds-card__header-title">
+                                    <a href="#" class="slds-card__header-link slds-truncate" title="Accounts">
+                                        <lightning:icon iconName="standard:note" alternativeText="XML file" title="XML" />
+                                        <span><strong>Notes And Attachments(0)</strong></span>
+                                    </a>
+                                </h2>
+                            </div>
+                            <div class="slds-no-flex">
+                                <lightning:button variant="brand-outline"  label="Upload File" title="Brand action" onclick="{! c.handleClick }" />
+                            </div>
+                        </header>
+                    </div>
+                    <center>
+                        <div class="slds-card slds-box ">
+                            <div class="  slds-align_absolute-center">
+                                <lightning:button variant="brand-outline" iconName="utility:upload" label="Upload File" title="Brand action" onclick="{! c.handleClick }" />
+                            </div>
+                        </div>
+                    </center>
+                </article>
+            </div>  
+            <div>
+                <div class="slds-card">
+                    <div class="slds-p-around_small">
+                        <article class="slds-card">
+                            <div class="slds-card__header slds-grid slds-box">
+                                <header class="slds-media slds-media_center slds-has-flexi-truncate">
+                                    <div class="slds-media__body">
+                                        <h2 class="slds-card__header-title">
+                                            <a href="#" class="slds-card__header-link slds-truncate" title="Accounts">
+                                                <lightning:icon iconName="standard:partners" alternativeText="contact " title="XML" />
+                                                <span><strong>Partners(0)</strong></span>
+                                            </a>
+                                        </h2>
+                                    </div>
+                                    <div class="slds-no-flex">
+                                        <lightning:button variant="brand-outline"  label="New" title="Brand action" onclick="{! c.handleClick }" />
+                                    </div>
+                                   
+                                </header>
+                               
+                            </div>
+                           
+                        </article>
+                    </div>
+                </div> </div>
+            </div>
+        </lightning:tab>
+        <lightning:tab label="Details" id="two">
+            <lightning:layout >
+                <div class="slds-p-bottom_large slds-p-left_large" style="width:1000px">
+                    <lightning:recordEditForm aura:id="recordEditForm"
+                                              objectApiName="Account">
+                        <div class="slds-grid slds-gutters slds-input">
+                            <div class="slds-col slds-p-left_x-large ">
+                               
+                                <lightning:layoutItem >
+                                    <lightning:inputField fieldName="Name" />
+                                    <lightning:inputField fieldName="AccountNumber" />
+                                    <lightning:inputField fieldName="Site" />
+                                    <lightning:inputField fieldName="Active__c" />
+                                    <lightning:inputField fieldName="AnnualRevenue" />
+                                    <lightning:inputField fieldName="Region__c" />
+                                    <lightning:inputField fieldName="BillingAddress" />
+                                    
+                                    <lightning:inputField fieldName="Phone" />
+                
+                                   
+                                </lightning:layoutItem>
+                            </div>
+                            <div class="slds-col slds-p-left_x-large ">
+                                <lightning:layoutItem>
+                                    <lightning:inputField fieldName="OwnerId" />
+                                    <lightning:inputField fieldName="CurrencyIsoCode" />
+                                    <lightning:inputField fieldName="ShippingAddress" />
+                                </lightning:layoutItem>
+                               
+                            </div>
+                        </div>
+                    </lightning:recordEditForm>
+                </div>
+            </lightning:layout>
+        </lightning:tab>
+       
+    </lightning:tabset>
+   
+</aura:component>

@@ -1,0 +1,11 @@
+<aura:component >
+    <aura:attribute name="parentattr" type="string" default="Hello From parent"/>
+    
+    <b> Value from Parent Attribute</b> {!v.parentattr}
+    <br/><br/>
+    <b> Calling Child Attribute</b>
+    
+    <c:Ltng_AuraChild30 aura:id="aurachild"/>
+    <lightning:button variant="success" label="Call Child Method" onclick="{!c.gotoaura}" />
+    
+</aura:component>

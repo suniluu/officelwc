@@ -1,0 +1,19 @@
+<aura:component controller="ltng_contact">
+    
+    <aura:attribute name="LastName" type="string"/>
+    <aura:attribute name="FirstName" type="string"/>
+    <aura:attribute name="Phone" type="string"/>
+    <aura:attribute name="Email" type="string"/>
+    
+    
+    <div>
+        <lightning:input name="LastName" label="LastName" placeholder="Input LastName" value="{!v.LastName}"/>
+        <lightning:input name="FirstName" label="FirstName" placeholder="Input FirstName" value="{!v.FirstName}"/>
+        <lightning:input name="Phone" label="Phone" placeholder="Input Phone" value="{!v.Phone}"/>
+        <lightning:input name="Email" label="Email" placeholder="Input Email" value="{!v.Email}"/>
+    </div>
+   <div class="slds-card slds-p-around_medium">
+    <lightning:button iconName="utility:create_contact" variant="brand"  onclick="{!c.Createcontact}"/>
+    </div>
+	RecordId::{!v.recordId}
+</aura:component>

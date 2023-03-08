@@ -1,0 +1,16 @@
+<template>
+    <h1> Add Numbers</h1>
+    <lightning-card title="Add Numbers">
+        <lightning-button label="New" slot="actions"></lightning-button>
+    <div class="slds-var-m-around_medium">
+       
+     <lightning-input  label="Enter FirstNumber" onchange={handlechange}  name="fnumber" value={firstNumber}></lightning-input>
+    
+        <lightning-input  label="Enter SecondNumber" onchange={handlechange}  name="snumber" value={secondNumber}></lightning-input>
+   
+    
+    Addition of {firstNumber} and {secondNumber} is{result}
+    
+</div>
+ </lightning-card>
+ </template>

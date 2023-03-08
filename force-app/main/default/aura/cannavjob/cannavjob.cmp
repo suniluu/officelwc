@@ -1,0 +1,34 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+    
+    <aura:attribute name="newcanRecord" type="Object" />
+    <aura:attribute name="recordFieldToQuery" type="Object" />
+    <aura:attribute name="recordError" type="String" />
+    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    
+    <force:recordData
+                      aura:id="createcanRecord"
+                      layoutType="FULL"
+                      mode="EDIT"
+                      fields="Id"
+                      targetRecord="{!v.newcanRecord}"
+                      targetFields="{!v.recordFieldToQuery}"
+                      targetError="{!v.recordError}"
+                      />
+    
+   <lightning:navigation aura:id="navService"/>
+    
+   <lightning:card title="Create Candidate" >
+       
+        <p>
+            <lightning:input label="FirstName" placeholder="First_Name__c"  value="{!v.recordFieldToQuery.First_Name__c}" />
+            <lightning:input label="LastName" value="{!v.recordFieldToQuery.Last_Name__c}" />
+            <lightning:input label="Email" value="{!v.recordFieldToQuery.Email__c}" />
+            <lightning:input label="Phone" value="{!v.recordFieldToQuery.Phone__c}" />
+            
+            <lightning:button variant="Brand" label="Create Candidate" onclick="{!c.createcan}"/>
+        </p>
+    </lightning:card>
+    
+     
+</aura:component>

@@ -1,0 +1,19 @@
+<template>
+    <h1>External Styling1</h1>
+    <lightning-card title=" External Styling1">
+        
+            
+                <h2>There are two ways of spreading light to be the candle or the mirror that reflects it h2</h2>
+                <p>You do not find the happy life You make it from p</p>
+            
+            <div class="myclass">
+                <template for:each={strings}
+                      for:item="vars">
+                    <ol key={vars} >
+                      <li>{vars}</li>
+                     </ol>
+              </template>
+            </div>
+        
+    </lightning-card>
+</template>

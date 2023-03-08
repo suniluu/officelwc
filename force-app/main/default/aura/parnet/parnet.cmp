@@ -1,0 +1,10 @@
+<aura:component  implements="flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+    
+    <aura:attribute name="recordId" type="id"/>
+    <aura:attribute name="accdata" type="list" />
+ 
+           
+
+    <lightning:button variant="success" label="call child method" onclick="{!c.gototauramethod}"/>
+	 <c:parnetchild aura:id="aurachild"/>
+</aura:component>

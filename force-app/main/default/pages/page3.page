@@ -1,0 +1,17 @@
+<apex:page controller="ClassWizard">
+    <apex:form >
+        <apex:pageBlock title="Enter Opportunity Details">
+            <apex:pageBlockButtons >
+            <apex:commandButton value="contact page" action="{!gotopage2}"/>
+            <apex:commandButton value="detail page" action="{!gotopage4}"/>
+            </apex:pageBlockButtons>
+            <apex:pageBlockSection columns="1">
+                <apex:inputField value="{!o.name}"/>
+                <apex:inputField value="{!o.stagename}"/>
+                <apex:inputField value="{!o.amount}"/>
+                <apex:inputField value="{!o.closedate}"/>
+                <apex:inputField value="{!o.type}"/>
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

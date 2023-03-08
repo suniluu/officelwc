@@ -1,0 +1,9 @@
+<template>
+    <lightning-card title="Account Record Create Form" icon-name="standard:account">
+        <div class="slds-var-p-around_x-small">
+            <lightning-input value={recAccount.Name} label="Employement website" onchange={handelNamechange}></lightning-input>
+            <lightning-input value={recAccount.Phone} label="Position" onchange={handelPhonechange}></lightning-input>
+            <lightning-button label="Save Account Rec" onclick={createAccRec} variant="brand"></lightning-button>
+        </div>
+    </lightning-card>
+</template>

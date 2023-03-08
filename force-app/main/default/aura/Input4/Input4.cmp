@@ -1,0 +1,20 @@
+<aura:component >
+    	<aura:attribute name="ParentAttriute" type="String" default="From Parent" />
+   
+    <div>
+        Calling Child Component without params::<br/><br/>
+    <c:Input3/><br/>
+    From  Parent::<br/><br/>
+    PArent Attribute value::<br/><br/>
+    {!v.ParentAttriute}<br/><br/>
+    </div>
+    <div>
+    Calling Child Component with 1 params::<br/><br/>
+    <c:Input3 Company="CommerceCX"/><br/><br/>
+	</div>
+        <div>
+    Calling Child Component with 2 params::<br/><br/>
+    <c:Input3  EmpCity ="Banglore" Company="CommerceCX"/><br/><br/>
+	</div>
+
+</aura:component>

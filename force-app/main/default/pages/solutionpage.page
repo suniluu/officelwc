@@ -1,0 +1,24 @@
+<apex:page standardController="Solution">
+    <apex:form >
+        <apex:pageBlock title="Solution Edit">
+            <apex:pageBlockButtons >
+                <apex:commandButton value="Save" action="{!Save}"/>
+                <apex:commandButton action="{Save&New}" value="Save & New"  />
+                <apex:commandButton value="Cancel" action="{!Cancel}"/>
+                 </apex:pageBlockButtons>
+                 <apex:pageblock title="Solution Information">
+                           <apex:pageBlockSection showHeader="false" >
+                            <apex:inputField value="{!Solution.CurrencyIsoCode}" /><br/>
+                            <apex:inputField value="{!Solution.SolutionName}" /><br/>
+                            <apex:inputField value="{!Solution.SolutionNote}" /><br/>
+                             
+                            </apex:pageBlockSection>
+                           </apex:pageblock>
+            
+            
+            
+            
+            </apex:pageBlock>
+    </apex:form>>
+    
+</apex:page>

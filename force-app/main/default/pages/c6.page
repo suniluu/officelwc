@@ -1,0 +1,17 @@
+<apex:page controller="C6controller">
+    <apex:pageBlock >
+        <apex:tabpanel switchtype="Ajax">
+            
+            <apex:tab label="Direct Accounts">
+                <apex:pageBlocktable value="{!directAccts}" var="a">
+                </apex:pageBlocktable>
+            </apex:tab>
+            
+            <apex:tab label="Channel Accounts">
+                <apex:pageBlocktable value="{!channelAccts}" var="b">
+                </apex:pageBlocktable>
+            </apex:tab>
+            
+        </apex:tabpanel>
+    </apex:pageBlock>
+</apex:page>

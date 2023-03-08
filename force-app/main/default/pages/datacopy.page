@@ -1,0 +1,28 @@
+<apex:page >
+    <script>
+    
+    function display() 
+    {
+        var x = document.getElementById("{!$Component.form.myblock.num1}").value;
+        if (x!=null)
+        {
+            document.getElementById("{!$Component.form.outblock.num2}").value = x;
+        }
+        
+    }
+    
+    </script>
+    
+    <apex:form id="form">
+        <apex:pageBlock id="myblock">
+            Name : <apex:inputText id="num1"/><br/><br/>
+            <apex:commandButton value="Display" onclick="display()"/>
+        </apex:pageBlock>
+        
+        <apex:pageBlock id="outblock" >
+            <apex:outputLabel >
+            Name : <apex:inputText id="num2"/><br/><br/>
+            </apex:outputLabel> <br/><br/>
+        </apex:pageBlock>       
+    </apex:form>
+</apex:page>

@@ -1,0 +1,8 @@
+<apex:page controller="c2controller">
+    {!newrec.name}
+    {! newrec.industry}
+    
+    <br/>
+    {!existingrec.name}
+    {! existingrec.industry}
+</apex:page>

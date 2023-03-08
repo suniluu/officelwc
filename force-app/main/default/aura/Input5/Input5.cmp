@@ -1,0 +1,14 @@
+<aura:component >
+	<aura:attribute name="empids" type="Integer[]"
+                    default="[11,22,33,55,88,99]"/>
+    <aura:attribute name="empcities" type="String[]" default="['hyd','ban','del']"/>
+      <aura:attribute name="empNames" type="list" default="['sam','ram','jam']"/>
+    
+     <aura:iteration items="{!v.empNames}" var="ename">
+             {!ename}<br/>
+    </aura:iteration>
+    <aura:iteration items="{!v.empids}" var="eids">
+    {!eids}<br></br>
+    </aura:iteration >
+        
+</aura:component>

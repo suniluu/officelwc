@@ -1,0 +1,22 @@
+<template>
+    <lightning-card title="Name In Caos">
+       
+            <lightning-button label="New" slot="actions"></lightning-button>
+        <div class="slds-var-m-around_medium">
+           
+    <h1>For Each loop using ul</h1>
+    <div class="slds-text-title_caps">
+      
+          
+        <template for:each={nameList}
+                    for:item="name" 
+                >
+           <ul key={name} class="slds-list_dotted">
+            <li>{name}</li>
+           </ul>
+        
+        </template>
+    </div>
+    </div>
+    </lightning-card>
+</template>

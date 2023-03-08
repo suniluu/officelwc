@@ -1,0 +1,8 @@
+<aura:component>
+    <lightning:tabset variant="scoped">
+        <lightning:tab onactive="{! c.handleActive }" label="Badge" id="badge" />
+        <lightning:tab onactive="{! c.handleActive }" label="Buttons" id="buttons" />
+        <lightning:tab onactive="{! c.handleActive }" label="Icons" id="icons" />
+        <lightning:tab onactive="{! c.handleActive }" label="Inputs" id="inputs" />
+    </lightning:tabset>
+</aura:component>

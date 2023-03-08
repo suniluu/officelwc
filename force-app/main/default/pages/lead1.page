@@ -1,0 +1,27 @@
+<apex:page standardController="Lead" recordSetVar="lds">
+    <apex:form >
+        <apex:tabPanel switchType="Ajax">
+            
+            <apex:tab label="Lead" labelWidth="450" style="Background-color:Black">
+                <apex:pageBlock title="lead Information" >
+                    <apex:pageBlockTable value="{!lds}" var="l" rows="6" rules="All">
+                        <apex:column value="{!l.LastName}"/>
+                        <apex:column value="{!l.Company}"/>
+                        <apex:column value="{!l.Email}"/>
+                        
+                        
+                    </apex:pageBlockTable>
+                    <apex:pageBlockButtons location="Bottom">
+                        <apex:commandButton value="First" action="{!first}"  />
+                        <apex:commandButton value="Prev" action="{!previous}"/>
+                        <apex:commandButton value="Next" action="{!next}" />
+                        <apex:commandButton value="Last" action="{!last}"  />
+                    </apex:pageBlockButtons>
+                    
+                </apex:pageBlock>
+            </apex:tab>
+            
+            
+        </apex:tabPanel>
+    </apex:form>
+</apex:page>

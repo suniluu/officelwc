@@ -1,0 +1,41 @@
+<aura:component controller="ContactList" implements="flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+<aura:attribute name="recordId" type="id"/>
+    <aura:attribute name="contacts" type="List"/>
+  
+  
+     <aura:handler name="init" value="{!this}" action="{!c.searchcontacts}" />
+  
+    <div class="slds-grid slds-wrap">
+        <aura:iteration items="{!v.contacts}" var="c">
+            <div class="slds-col slds-size_1-of-2 slds-p-around_x-small">
+                <lightning:card>
+                    <aura:set attribute="title">
+                        <lightning:icon iconName="standard:contact" size="small"/>
+                        {!c.LastName}
+                    </aura:set>
+                    
+                    <aura:set attribute="footer">
+                        <aura:if isTrue="{!c.Email}">
+                        {!c.Email}
+                            <aura:set attribute="else">
+                                 abc@gmail.com
+                            </aura:set>
+                             </aura:if> 
+                    </aura:set>
+                    <aura:set attribute="actions">
+                        <lightning:button variant="brand" label="Detail" title="Leads" onclick="{!c.getLeadDetail}"/>
+                        
+                    </aura:set>
+                    <p>
+                        <b>
+                            {!c.LastName} 
+                        </b><br/>
+                        {!c.Email}<br/>
+                        {!c.Phone}<br/>
+                    </p>
+                </lightning:card>
+            </div>   
+        </aura:iteration>
+    </div>
+    {!v.recordId}
+</aura:component>

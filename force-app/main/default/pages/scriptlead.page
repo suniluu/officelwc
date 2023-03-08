@@ -1,0 +1,24 @@
+<apex:page standardController="Lead" id="pg1">
+    <apex:form id="fm1">
+    <apex:inputHidden value="{!Lead.lastName}" id="n1"/>
+    <apex:inputHidden value="{!Lead.firstName}" id="n2"/>
+    <apex:commandButton value="GetlastName" onclick="lastName()"/>
+    <apex:commandButton value="GetfirstName" onclick="firstName()"/>
+    
+        <script>
+        function lastName()
+        {
+            var lastName=document.getElementById('{!$Component.pg1.fm1.n1}').value;
+            alert(lastName);
+           
+        }
+        function firstName()
+        {
+            var firstName=document.getElementById("pg1:fm1:n2").value;
+            
+            alert(firstName);
+        }
+        
+        </script>
+    </apex:form>
+</apex:page>

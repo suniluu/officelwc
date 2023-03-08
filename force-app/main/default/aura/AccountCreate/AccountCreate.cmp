@@ -1,0 +1,21 @@
+<aura:component controller="createaccount" >
+     <aura:attribute name="Name" type="String"/>
+     <aura:attribute name="Phone" type="String"/>
+     <aura:attribute name="Industry" type="String"/>
+    <aura:attribute name="AnnualRevenue" type="decimal"/>
+    <aura:handler name="change" value="{!v.Industry}" action="{!c.changename}"/>
+     
+    
+   <div>
+   Account Name  <lightning:input name="Name" Label="Name" placeholder="Enter  name" value="{!v.Name}" /><br/>
+   Phone <lightning:input name="Phone" Label="Phone" placeholder="Enter phone" value="{!v.Phone}" /><br/>
+   AnnualRevenue <lightning:input name="AnnualRevenue" Label="AnnualRevenue" placeholder="Enter AnnualRevenue" value="{!v.AnnualRevenue}" /><br/>
+   Industry<lightning:select name="Industry" label="Select a Industry" required="true" value="{!v.Industry}">
+       
+        <option value="Education">Education</option>
+        <option value="Agriculture">Agriculture</option>
+        <option value="Banking">Banking</option>
+    </lightning:select>
+    </div>
+	
+</aura:component>

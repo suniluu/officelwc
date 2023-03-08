@@ -1,0 +1,56 @@
+<apex:page > 
+    <script>
+    function addition() {
+        var y = parseFloat(document.getElementById("{!$Component.form.myblock.num1}").value);
+        var z = parseFloat(document.getElementById("{!$Component.form.myblock.num2}").value);
+        if (!isNaN(y) && !isNaN(z))
+        {
+            var x = y + z;
+            document.getElementById("{!$Component.form.outblock.demo}").value = x;
+        }
+        
+    }
+    function subtraction() {
+        var y = parseFloat(document.getElementById("{!$Component.form.myblock.num1}").value);
+        var z = parseFloat(document.getElementById("{!$Component.form.myblock.num2}").value);
+        if (!isNaN(y) && !isNaN(z)){
+            var x = y - z;
+            document.getElementById("{!$Component.form.outblock.demo}").value = x;
+        }
+        
+    }
+    function multiplication() {
+        var y = parseFloat(document.getElementById("{!$Component.form.myblock.num1}").value);
+        var z = parseFloat(document.getElementById("{!$Component.form.myblock.num2}").value);
+        if (!isNaN(y) && !isNaN(z)){
+            var x = y * z;
+            document.getElementById("{!$Component.form.outblock.demo}").value= x;
+        }
+        
+    }
+    function division() {
+        var y = parseFloat(document.getElementById("{!$Component.form.myblock.num1}").value);
+        var z = parseFloat(document.getElementById("{!$Component.form.myblock.num2}").value);
+        if (!isNaN(y) && !isNaN(z))
+        {
+            var x = y / z;
+            document.getElementById("{!$Component.form.outblock.demo}").value = x;
+        }
+        
+    }
+    </script>
+    <apex:form id="form">
+        <apex:pageBlock id="myblock">
+            Number1 : <apex:inputText id="num1"/><br/><br/>
+            Number2 : <apex:inputText id="num2" /><br/><br/>
+            <apex:commandButton value="Addition" onclick="addition()"/>
+            <apex:commandButton value="Subtraction" onclick="subtraction()"/>
+            <apex:commandButton value="Multiplication" onclick="multiplication()"/>
+            <apex:commandButton value="Division" onclick="division()"/>
+        </apex:pageBlock>
+        <apex:pageBlock id="outblock" >
+            <apex:outputLabel > Math Operation: </apex:outputLabel><br/><br/>
+            Block B : <apex:inputText id="demo"/><br/><br/>
+        </apex:pageBlock>       
+    </apex:form>
+</apex:page>

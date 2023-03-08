@@ -1,0 +1,13 @@
+<aura:tokens>
+    <aura:token name="bg" value="#FFC0CB"/>
+    <aura:token name="bg1" value="#87CEEB"/>
+    <aura:token name="bg2" value="#708090"/>
+    <aura:token name="size1" value="20px"/>
+     <aura:token name="size2" value="30px"/>
+    <aura:token name="size3" value="40px"/>
+    <aura:token name="size4" value="50px"/>
+    <aura:token name="color1" value="#FF1"/>
+    <aura:token name="color2" value="#940"/>
+    <aura:token name="color3" value="#FFD"/>
+	<aura:token name="color4" value="#008"/>
+</aura:tokens>

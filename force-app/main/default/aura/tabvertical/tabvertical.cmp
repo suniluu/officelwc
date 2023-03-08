@@ -1,0 +1,22 @@
+<aura:component>
+    <lightning:tabset variant="vertical">
+        <lightning:tab label="Item One">
+            Content in Tab One
+        </lightning:tab>
+        <lightning:tab label="Item Two">
+            Content in Tab Two
+        </lightning:tab>
+        <lightning:tab label="Item Three">
+            Content in Tab Three
+        </lightning:tab>
+        <lightning:tab label="Item Four">
+            Content in Tab Four
+        </lightning:tab>
+        <lightning:tab label="Item Five">
+            Content in Tab Five
+        </lightning:tab>
+        <lightning:tab label="Item Six">
+            Content in Tab Six
+        </lightning:tab>
+    </lightning:tabset>
+</aura:component>

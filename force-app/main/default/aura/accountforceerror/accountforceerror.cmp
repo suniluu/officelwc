@@ -1,0 +1,22 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global">
+	<aura:attribute name="record" type="object"/>
+    <aura:attribute name="recordFieldsToQuery" type="object"/>
+    <aura:attribute name="recordError" type="string"/>
+    <force:recordData aura:id="SavingRecord"
+                      recordId="{!v.recordId}"
+                      layoutType="FULL"
+                      mode="EDIT"
+                      targetRecord="{!v.record}"
+                      targetFields="{!v.recordFieldsToQuery}"
+                      targetError="{!v.recordError}"/>
+    <lightning:card iconName="action:edit" title="Edit Account">
+    <lightning:input label="Account Name" value="{!v.recordFieldsToQuery.Name}" /><br/>
+        <lightning:input label="Account Phone" value="{!v.recordFieldsToQuery.Phone}" /><br/>
+        <lightning:input label="Account Industry" value="{!v.recordFieldsToQuery.Industry}" /><br/>
+        <lightning:button label="Save Changes" variant="brand" onclick="{!c.handleSaveChange}"/>
+    </lightning:card>
+    <aura:if isTrue="{!not(empty(v.recordError))}">
+        <div class="recordError">
+            {!v.recordError}</div>
+    </aura:if>
+</aura:component>

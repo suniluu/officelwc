@@ -1,0 +1,49 @@
+<aura:component>
+    <lightning:tabset variant="scoped">
+        <lightning:tab label="Item One">
+            Content in Tab One
+        </lightning:tab>
+        <lightning:tab label="Item Two">
+            Content in Tab Two
+        </lightning:tab>
+        <lightning:tab label="Item Three">
+            Content in Tab Three
+        </lightning:tab>
+        <lightning:tab label="Item Four">
+            Content in Tab Four
+        </lightning:tab>
+        <lightning:tab label="Item Five">
+            Content in Tab Five
+        </lightning:tab>
+        <lightning:tab label="Item Six">
+            Content in Tab Six
+        </lightning:tab>
+        <lightning:tab label="Item Seven">
+            Content in Tab Seven
+        </lightning:tab>
+        <lightning:tab label="Item Eight">
+            Content in Tab Eight
+        </lightning:tab>
+        <lightning:tab label="Item Nine">
+            Content in Tab Nine
+        </lightning:tab>
+        <lightning:tab label="Item Ten">
+            Content in Tab Ten
+        </lightning:tab>
+        <lightning:tab label="Item Eleven">
+            Content in Tab Eleven
+        </lightning:tab>
+        <lightning:tab label="Item Twelve">
+            Content in Tab Twelve
+        </lightning:tab>
+        <lightning:tab label="Item Thirteen">
+            Content in Tab Thirteen
+        </lightning:tab>
+        <lightning:tab label="Item Fourteen">
+            Content in Tab Fourteen
+        </lightning:tab>
+        <lightning:tab label="Item Fifteen">
+            Content in Tab Fifteen
+        </lightning:tab>
+    </lightning:tabset>
+</aura:component>

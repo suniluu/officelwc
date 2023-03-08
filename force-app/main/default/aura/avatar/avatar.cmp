@@ -1,0 +1,21 @@
+<aura:component>
+    Basic Avatar::
+<lightning:avatar src="/docs/component-library/app/images/examples/avatar1.jpg" initials="BW" fallbackIconName="standard:person_account" alternativeText="Bob Wilson"/>
+   <br/><br/> Avatar Sizes::
+    <lightning:avatar size="x-small" src="/docs/component-library/app/images/examples/avatar2.jpg" initials="JD" fallbackIconName="standard:person_account" alternativeText="Jane Doe" class="slds-m-right_small"/>
+    <lightning:avatar size="small"   src="/docs/component-library/app/images/examples/avatar3.jpg" initials="TP" fallbackIconName="standard:person_account" alternativeText="Tony Price" class="slds-m-right_small"/>
+    <lightning:avatar size="medium"  src="/docs/component-library/app/images/examples/avatar1.jpg" initials="RE" fallbackIconName="standard:person_account" alternativeText="Ryan Eddie" class="slds-m-right_small"/>
+    <lightning:avatar size="large"   src="/docs/component-library/app/images/examples/avatar2.jpg" initials="CR" fallbackIconName="standard:person_account" alternativeText="Cindy Rice" class="slds-m-right_small"/>
+  <br/><br/> Avatar Variants::
+    <lightning:avatar variant="circle" src="/docs/component-library/app/images/examples/avatar2.jpg" initials="AW" fallbackIconName="standard:person_account" alternativeText="Amy Weaver" class="slds-m-right_small"/>
+    <lightning:avatar variant="square" src="/docs/component-library/app/images/examples/avatar2.jpg" initials="SJ" fallbackIconName="standard:person_account" alternativeText="Sarah Jones" class="slds-m-right_small"/>
+<br/><br/>Avatar Initials::
+    <lightning:avatar src="/bad/image/url.jpg" initials="Sa" fallbackIconName="standard:account" alternativeText="Salesforce" class="slds-m-right_small"/>
+    <lightning:avatar src="/bad/image/url.jpg" initials="BW" fallbackIconName="standard:avatar"  alternativeText="Bob Wilson" class="slds-m-right_small"/>
+    <lightning:avatar src="/bad/image/url.jpg" initials="WE" fallbackIconName="custom:custom92"  alternativeText="Wilson Enterprises" class="slds-m-right_small"/>
+<br/><br/>Avatar Icons::
+    <lightning:avatar src="/bad/image/url.jpg" initials="" fallbackIconName="standard:account" alternativeText="Salesforce" class="slds-m-right_small"/>
+    <lightning:avatar src="/bad/image/url.jpg" initials="" fallbackIconName="standard:avatar"  alternativeText="Bob Wilson" class="slds-m-right_small"/>
+    <lightning:avatar src="/bad/image/url.jpg" initials="" fallbackIconName="custom:custom92"  alternativeText="Wilson Enterprises" class="slds-m-right_small"/>
+
+</aura:component>

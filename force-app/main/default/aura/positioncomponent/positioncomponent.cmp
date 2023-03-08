@@ -1,0 +1,12 @@
+<aura:component controller="positionaura">
+    <aura:attribute name="positions" type="List"/>
+    <lightning:button variant="success" label="Display Positions" title="position" onclick="{!c.getpositions}"/>
+    Position Information::<br/>
+    <aura:iteration items="{!v.positions}" var="poss">
+    PositionName::{!poss.Name}<br/><br/>
+    PositionfuncationalArea::{!poss.Functional_Area__c}<br/><br/>
+    PositionMinpay::{!poss.Min_Pay__c}<br/><br/>
+    PositionMaxPay::{!poss.Max_Pay__c}<br/><br/>
+    </aura:iteration>
+	
+</aura:component>

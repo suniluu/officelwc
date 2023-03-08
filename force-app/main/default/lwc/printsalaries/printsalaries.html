@@ -1,0 +1,41 @@
+<template>
+    <lightning-card title="Iterator">
+
+        <div>
+            <template iterator:emp={empl}>
+                <div key={emp.value.id}>
+                    <ul>
+                        <template if:true={emp.first}>
+                            <div class="slds-var-m-around_medium">
+                                <strong>
+                                    List Of Employees
+                                </strong>
+                            </div>
+                        </template>
+
+                        <li>
+                            <strong>
+                               EmpId:: {emp.value.id}
+                            </strong>
+                        </li>
+                        
+                        <li>
+                            <strong>
+                               EmpSalary:: {emp.value.esalary}
+                            </strong>
+                        </li>
+                    
+                        <template if:true={emp.last}>
+                            <div class="slds-var-m-around_medium">
+                                <strong>
+                                    End Of Employees List
+                                </strong>
+                            </div>
+                        </template>
+                    </ul>
+                </div>
+            </template>
+    
+        </div>
+        </lightning-card>
+</template>

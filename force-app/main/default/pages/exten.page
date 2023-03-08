@@ -1,0 +1,26 @@
+<apex:page controller="custable" sidebar="false">
+    <apex:form >
+        <apex:pageBlock title="AccountTable">
+            <apex:pageBlockTable value="{!Acclst}" var="A">
+                 
+            <apex:column headerValue="NAME OF THE ACCOUNT" > 
+            <apex:commandLink value="{!A.Name}" action="{!setupContacts}" rerender="conttable" >
+              <apex:param value="{!A.Id}" name="idForConts" assignTo="{!recid}"/>
+            </apex:commandLink>
+            </apex:column>  
+             <apex:column value="{!A.industry}"/>
+             <apex:column value="{!A.phone}"/>
+            </apex:pageBlockTable>
+        </apex:pageBlock>                
+    <apex:pageBlock title="Contacts">
+      <apex:pageBlockTable value="{!contacts}" var="contact" id="conttable">
+      <apex:column headerValue="ID" > 
+       <apex:commandLink value="{!contact.id}" onclick="window.open('/{!contact.Id}','_blank');">
+       </apex:commandLink>
+       </apex:column> 
+        <apex:column value="{!contact.FirstName}"/>
+        <apex:column value="{!contact.LastName}"/>
+      </apex:pageBlockTable>
+    </apex:pageBlock>
+    </apex:form>              
+    </apex:page>

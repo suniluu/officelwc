@@ -1,0 +1,17 @@
+<!-- 2.Create lightning page to conditionally render the component/Image.-->
+<aura:component >
+    <aura:attribute name="Ch1" type="Boolean" default="True"/>
+    <aura:attribute name="Ch2" type="Boolean" default="False"/>
+   
+    <b>Lightning page to conditionally render.</b><br/><br/>
+    <div>
+        <aura:if isTrue="{!v.Ch2}">
+            <c:addnumberh/>
+            <aura:set attribute="else">
+                <div class="slds-align_absolute-center slds-p-top_xx-large" >
+                    <img src="{!$Resource.Auto}" width="150" height="350"/>
+                </div>
+            </aura:set>
+        </aura:if>
+    </div><br/><br/>
+</aura:component>

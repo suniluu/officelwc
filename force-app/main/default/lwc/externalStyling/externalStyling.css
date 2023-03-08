@@ -1,0 +1,18 @@
+.class
+{
+    color: var(--lwc-brandPrimary);
+    background-color: var(--lwc-colorBackgroundHighlight);
+}
+.class2  
+{
+    color: var(--lwc-brandContrast);
+    background-color: var(--lwc-colorBackgroundRowNew);
+
+}
+div
+{
+    background-color: var(--lwc-colorBackgroundAltInverse);
+    border-color: var(--lwc-colorBorderBrand);
+    border-radius: var(--lwc-borderRadiusLarge);
+    
+}

@@ -1,0 +1,16 @@
+<apex:page >
+    <apex:includeLightning />    
+    
+    <div id="LtngCompContainer" />    
+    <script>
+    $Lightning.use("c:styleapp", function() {
+        $Lightning.createComponent("c:stylecmp",
+          { 
+          },
+          "LtngCompContainer",
+          function(cmp) {
+             console.log('Display Lightning component in visualforce page');
+          });
+    });
+    </script>
+</apex:page>

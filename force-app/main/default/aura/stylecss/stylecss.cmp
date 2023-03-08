@@ -1,0 +1,14 @@
+<aura:component >
+    
+    <p style="Font-family:Italic ; color:blue;">Welcome to Lightning Component world</p>
+    <br/>
+    
+    <p class="color">Welcome to Lightning Component world</p>
+    <br/>
+    
+    <div id="pid">
+    <p class="p">Welcome to Lightning Component world</p>
+    </div>
+    <ltng:require  styles="{!$Resource.images}"/>
+    
+</aura:component>

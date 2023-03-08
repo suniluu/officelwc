@@ -1,0 +1,15 @@
+<aura:component >
+    <aura:attribute name="empname" type="string" default="Sai"/>
+     <aura:attribute name="age" type="integer" default="20"/>
+     <aura:attribute name="salary" type="integer" default="30000"/>
+    <b> Value from Parent Attribute</b><br/>
+    {!v.empname}<br/>
+    {!v.age}<br/>
+    {!v.salary}<br/>
+    <br/><br/>
+    <b> Calling Child Attribute</b>
+    
+    <c:Ltng_AuraChild32 aura:id="aurachild"/>
+    <lightning:button variant="success" label="Call Child Method" onclick="{!c.gotoauramethod}" />
+    
+</aura:component>
